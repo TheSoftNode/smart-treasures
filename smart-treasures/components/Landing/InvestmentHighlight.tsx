@@ -65,7 +65,7 @@ const InvestmentHighlight: React.FC = () => {
                     <h2 className="text-3xl font-bold bg-gradient-to-r from-yellow-400 via-teal-500 to-pink-500 bg-clip-text text-transparent inline-block mb-4">
                         Start Your Investment Journey
                     </h2>
-                    <p className="max-w-2xl mx-auto text-slate-600 dark:text-slate-400">
+                    <p className="max-w-2xl mx-auto text-justify text-slate-600 dark:text-slate-400">
                         Discover opportunities with our Cebex investment platform and become part of our growing global community of investors.
                     </p>
                     <div className="mt-4">
@@ -104,7 +104,7 @@ const InvestmentHighlight: React.FC = () => {
                     <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
                         <div>
                             <h3 className="text-2xl font-bold text-slate-800 dark:text-slate-200 mb-2">Ready to get started?</h3>
-                            <p className="text-slate-600 dark:text-slate-400 max-w-xl">
+                            <p className="text-slate-600 text-justify dark:text-slate-400 max-w-xl">
                                 Our Cebex platform provides a secure and easy way to begin your investment journey with Smart Treasures. Join thousands of global investors today.
                             </p>
                             <div className="mt-3">

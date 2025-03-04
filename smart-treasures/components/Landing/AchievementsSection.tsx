@@ -93,7 +93,7 @@ const AchievementsSection: React.FC = () => {
                     <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-500 via-yellow-500 to-pink-500 bg-clip-text text-transparent mb-4">
                         Our Achievements
                     </h2>
-                    <p className="max-w-3xl mx-auto text-lg text-slate-600 dark:text-slate-400">
+                    <p className="max-w-3xl mx-auto text-lg text-justify text-slate-600 dark:text-slate-400">
                         Over the years, we've achieved remarkable milestones, including our target of establishing over 5,200 coffee shops and 800 bars by 2025. We are proud to lead the way in sustainable growth and community building.
                     </p>
                 </motion.div>
@@ -118,7 +118,7 @@ const AchievementsSection: React.FC = () => {
                                 </h3>
                             </div>
 
-                            <p className="text-lg text-slate-600 dark:text-slate-400 mb-6">
+                            <p className="text-lg text-slate-600 text-justify dark:text-slate-400 mb-6">
                                 {achievement.description}
                             </p>
 

@@ -6,13 +6,16 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { TrendingUp, Coffee, Users, GraduationCap } from 'lucide-react';
 
-const HeroSection: React.FC = () => {
+const HeroSection: React.FC = () =>
+{
     const controls = useAnimation();
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, amount: 0.3 });
 
-    useEffect(() => {
-        if (isInView) {
+    useEffect(() =>
+    {
+        if (isInView)
+        {
             controls.start('visible');
         }
     }, [controls, isInView]);
@@ -87,7 +90,7 @@ const HeroSection: React.FC = () => {
 
                     <motion.p
                         variants={itemVariants}
-                        className="mt-5 mx-auto text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-4xl"
+                        className="mt-5 mx-auto text-justify md:text-center text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-4xl"
                     >
                         Smart Treasures empowers communities worldwide through strategic investments, collaborative spaces, and sustainable practices. Join our growing network building the future of community-driven prosperity.
                     </motion.p>
@@ -128,7 +131,7 @@ const HeroSection: React.FC = () => {
 
                     <motion.div
                         variants={itemVariants}
-                        className="mt-8 sm:mt-10 flex flex-wrap justify-center gap-3"
+                        className="mt-8 sm:mt-10 hidden md:flex flex-wrap justify-center gap-3"
                     >
                         <div className="bg-white dark:bg-slate-900 py-2 px-4 rounded-full shadow-md flex items-center">
                             <Coffee className="h-4 w-4 text-yellow-500 mr-2" />

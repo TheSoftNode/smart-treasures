@@ -103,7 +103,7 @@ const FaqSection: React.FC = () => {
                         <h2 className="text-3xl font-bold bg-gradient-to-r from-yellow-400 via-teal-500 to-pink-500 bg-clip-text text-transparent mb-4">
                             Frequently Asked Questions
                         </h2>
-                        <p className="max-w-3xl mx-auto text-slate-600 dark:text-slate-400">
+                        <p className="max-w-3xl mx-auto text-slate-600 text-justify dark:text-slate-400">
                             Find answers to common questions about Smart Treasures, our investment platform, and our global community initiatives.
                         </p>
                     </motion.div>
@@ -125,7 +125,7 @@ const FaqSection: React.FC = () => {
                                     onClick={() => setActiveIndex(activeIndex === index ? null : index)}
                                 >
                                     <div className="flex-1 pr-4">
-                                        <h3 className="text-lg font-semibold text-slate-800 dark:text-slate-200">
+                                        <h3 className="text-lg font-semibold  text-slate-800 dark:text-slate-200">
                                             {faq.question}
                                         </h3>
                                         {faq.category && (

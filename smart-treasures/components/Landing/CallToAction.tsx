@@ -71,7 +71,7 @@ const FinalCallToAction: React.FC = () => {
                         Join the Smart Treasures Community
                     </h2>
                     <div className="mt-4 max-w-3xl mx-auto">
-                        <p className="text-slate-600 dark:text-slate-300">
+                        <p className="text-slate-600 text-justify dark:text-slate-300">
                             Be part of a global movement creating opportunities through investments, education, and community.
                         </p>
                     </div>
@@ -88,7 +88,7 @@ const FinalCallToAction: React.FC = () => {
                                 Ready to Start Your <span className="bg-gradient-to-r from-yellow-400 via-teal-500 to-pink-500 bg-clip-text text-transparent">Journey?</span>
                             </h3>
 
-                            <p className="text-base md:text-lg text-slate-600 dark:text-slate-300 mb-6">
+                            <p className="text-base md:text-lg text-justify text-slate-600 dark:text-slate-300 mb-6">
                                 Join Smart Treasures today to access exclusive investment opportunities, educational resources, and our global community of like-minded individuals.
                             </p>
 

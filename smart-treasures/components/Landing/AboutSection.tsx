@@ -6,7 +6,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, Users, Coffee, Globe } from 'lucide-react';
 
-const AboutSection: React.FC = () => {
+const AboutSection: React.FC = () =>
+{
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, amount: 0.3 });
 
@@ -44,7 +45,7 @@ const AboutSection: React.FC = () => {
                     className="flex flex-col lg:flex-row items-center justify-between gap-12"
                 >
                     {/* Text Section */}
-                    <motion.div variants={itemVariants} className="lg:w-1/2 text-center lg:text-left">
+                    <motion.div variants={itemVariants} className="lg:w-1/2 text-justify lg:text-left">
                         <div className="inline-block mb-4 lg:mb-6">
                             <div className="h-1 w-16 bg-gradient-to-r from-yellow-400 via-teal-500 to-pink-500 rounded-full"></div>
                         </div>
@@ -61,20 +62,20 @@ const AboutSection: React.FC = () => {
                             With a team of over 50,000 members and a vision to expand globally by 2025, we are creating spaces for professional networking and community building through our coffee shops and bars.
                         </p>
 
-                        <div className="flex flex-wrap gap-4 mb-6">
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-2 mb-6">
                             <div className="flex items-center bg-white dark:bg-slate-800 px-4 py-2 rounded-full shadow-sm">
                                 <Users className="h-5 w-5 text-teal-500 mr-2" />
-                                <span className="text-sm font-medium text-slate-700 dark:text-slate-300">50,000+ Members</span>
+                                <span className="text-xs md:text-sm font-medium text-slate-700 dark:text-slate-300">50,000+ Members</span>
                             </div>
 
                             <div className="flex items-center bg-white dark:bg-slate-800 px-4 py-2 rounded-full shadow-sm">
                                 <Coffee className="h-5 w-5 text-yellow-500 mr-2" />
-                                <span className="text-sm font-medium text-slate-700 dark:text-slate-300">5,200+ Locations</span>
+                                <span className="text-xs md:text-sm font-medium text-slate-700 dark:text-slate-300">5,200+ Locations</span>
                             </div>
 
                             <div className="flex items-center bg-white dark:bg-slate-800 px-4 py-2 rounded-full shadow-sm">
                                 <Globe className="h-5 w-5 text-pink-500 mr-2" />
-                                <span className="text-sm font-medium text-slate-700 dark:text-slate-300">Global Network</span>
+                                <span className="text-xs md:text-sm font-medium text-slate-700 dark:text-slate-300">Global Network</span>
                             </div>
                         </div>
 
@@ -88,7 +89,7 @@ const AboutSection: React.FC = () => {
                     </motion.div>
 
                     {/* Image Section with decorative elements */}
-                    <motion.div variants={itemVariants} className="lg:w-1/2 relative">
+                    <motion.div variants={itemVariants} className="lg:w-1/2 w-full relative">
                         {/* Decorative background elements */}
                         <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-yellow-400/10 blur-3xl"></div>
                         <div className="absolute -bottom-10 -left-10 w-40 h-40 rounded-full bg-teal-500/10 blur-3xl"></div>
@@ -97,7 +98,7 @@ const AboutSection: React.FC = () => {
                         <div className="relative rounded-xl p-1 bg-gradient-to-br from-yellow-400 via-teal-500 to-pink-500">
                             <div className="aspect-[4/3] relative rounded-lg overflow-hidden shadow-xl">
                                 <Image
-                                    src="/about/about.jpg" // Update with correct path
+                                    src="/about/about.jpg"
                                     alt="Smart Treasures Investment Group"
                                     layout="fill"
                                     objectFit="cover"

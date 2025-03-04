@@ -61,7 +61,7 @@ const AcademyCTA: React.FC = () => {
                                 <span className="bg-gradient-to-r from-yellow-400 via-teal-500 to-pink-500 bg-clip-text text-transparent">With Expert-Led Training</span>
                             </motion.h2>
 
-                            <motion.p variants={itemVariants} className="text-slate-600 dark:text-slate-300 mb-6">
+                            <motion.p variants={itemVariants} className="text-slate-600 text-justify dark:text-slate-300 mb-6">
                                 Gain in-demand skills with our comprehensive tech courses. From coding to data science, our expert instructors will guide you through hands-on projects and real-world applications.
                             </motion.p>
 
