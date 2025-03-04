@@ -108,7 +108,7 @@ const StatsSection: React.FC = () => {
                                 variants={itemVariants}
                                 className="bg-white dark:bg-slate-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
                             >
-                                <div className="p-6 relative">
+                                <div className="p-4 md:p-6 relative">
                                     {/* Top accent line with gradient */}
                                     <div className={`absolute top-0 left-0 right-0 h-1 bg-${stat.iconColor}-500`}></div>
 
