@@ -89,7 +89,7 @@ const TermsOfService = () => {
     };
 
     return (
-        <div className="bg-gradient-to-b from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900 py-12 px-4 sm:px-6">
+        <div className="bg-gradient-to-b from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900 py-24 px-4 sm:px-6">
             <motion.div
                 initial="hidden"
                 animate="visible"
