@@ -1,6 +1,9 @@
 "use client";
 
 import React, { useState, ChangeEvent, FormEvent } from "react";
+import dynamic from "next/dynamic";
+
+const GlobalMap = dynamic(() => import("@/components/Map/GlobalMap"), { ssr: false });
 import { motion, Variants } from "framer-motion";
 import {
     SendIcon,
