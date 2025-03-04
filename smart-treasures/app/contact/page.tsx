@@ -5,18 +5,19 @@ import dynamic from "next/dynamic";
 
 const GlobalMap = dynamic(() => import("@/components/Map/GlobalMap"), { ssr: false });
 import { motion, Variants } from "framer-motion";
-import {
-    SendIcon,
-    MapPinIcon,
-    PhoneIcon,
-    MailIcon,
-    CheckCircleIcon
-} from "lucide-react";
+import
+    {
+        SendIcon,
+        MapPinIcon,
+        PhoneIcon,
+        MailIcon,
+        CheckCircleIcon
+    } from "lucide-react";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
-import GlobalMap from "@/components/Map/GlobalMap";
 
 // TypeScript interface for form data
-interface FormData {
+interface FormData
+{
     name: string;
     email: string;
     subject: string;
@@ -25,7 +26,8 @@ interface FormData {
 
 
 
-const ContactUs: React.FC = () => {
+const ContactUs: React.FC = () =>
+{
     const [formData, setFormData] = useState<FormData>({
         name: "",
         email: "",
@@ -36,7 +38,8 @@ const ContactUs: React.FC = () => {
     const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
     const [isLoading, setIsLoading] = useState<boolean>(false);
 
-    const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
+    const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void =>
+    {
         const { name, value } = e.target;
         setFormData(prevState => ({
             ...prevState,
@@ -44,7 +47,8 @@ const ContactUs: React.FC = () => {
         }));
     };
 
-    const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
+    const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> =>
+    {
         e.preventDefault();
         setIsLoading(true);
 
