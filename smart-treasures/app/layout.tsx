@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
+import ConstructionBanner from "@/components/Landing/ConstructionBanner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,14 +31,18 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
+
+
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >
+          <ConstructionBanner />
+
           <Navbar />
-          <main className="flex-grow pt-24">
+          <main className="flex-grow">
             {children}
           </main>
           <Footer />

@@ -58,7 +58,7 @@ const JoinUs: React.FC = () => {
     ];
 
     return (
-        <div className="bg-gradient-to-b from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900 py-12 md:py-16">
+        <div className="bg-gradient-to-b from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900 py-24">
             <motion.div
                 initial="hidden"
                 animate="visible"

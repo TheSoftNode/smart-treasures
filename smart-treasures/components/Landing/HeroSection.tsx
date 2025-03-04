@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import { motion, useAnimation, useInView } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
-import { TrendingUp, Coffee, Users } from 'lucide-react';
+import { TrendingUp, Coffee, Users, GraduationCap } from 'lucide-react';
 
 const HeroSection: React.FC = () => {
     const controls = useAnimation();
@@ -43,7 +43,7 @@ const HeroSection: React.FC = () => {
     };
 
     return (
-        <div className="relative min-h-[75vh] flex items-center justify-center overflow-hidden">
+        <div className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
             {/* Background with overlay */}
             <div className="absolute inset-0 w-full h-full z-0">
                 <Image
@@ -116,6 +116,14 @@ const HeroSection: React.FC = () => {
                             Join Our Community
                             <Users className="ml-2 h-5 w-5" />
                         </Link>
+
+                        <Link
+                            href="/academy"
+                            className="w-full sm:w-auto flex items-center justify-center px-8 py-3 border-2 border-emerald-500 text-emerald-600 dark:text-emerald-400 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm font-medium rounded-lg hover:bg-emerald-50 hover:dark:bg-emerald-900/20 transition-all duration-300"
+                        >
+                            ST Academy
+                            <GraduationCap className="ml-2 h-5 w-5" />
+                        </Link>
                     </motion.div>
 
                     <motion.div
@@ -135,6 +143,11 @@ const HeroSection: React.FC = () => {
                         <div className="bg-white dark:bg-slate-900 py-2 px-4 rounded-full shadow-md flex items-center">
                             <TrendingUp className="h-4 w-4 text-pink-500 mr-2" />
                             <span className="text-xs font-medium text-slate-700 dark:text-slate-300">Growing Investment Network</span>
+                        </div>
+
+                        <div className="bg-white dark:bg-slate-900 py-2 px-4 rounded-full shadow-md flex items-center">
+                            <GraduationCap className="h-4 w-4 text-emerald-500 mr-2" />
+                            <span className="text-xs font-medium text-slate-700 dark:text-slate-300">Tech Academy</span>
                         </div>
                     </motion.div>
                 </motion.div>

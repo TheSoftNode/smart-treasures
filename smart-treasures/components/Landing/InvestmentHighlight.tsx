@@ -1,8 +1,9 @@
 "use client"
 
 import React, { useRef } from 'react';
+import Link from 'next/link';
 import { motion, useInView } from 'framer-motion';
-import { ArrowRight, BarChart2, TrendingUp, DollarSign } from 'lucide-react';
+import { ArrowRight, BarChart2, TrendingUp, DollarSign, BookOpen } from 'lucide-react';
 
 const InvestmentHighlight: React.FC = () => {
     const ref = useRef(null);
@@ -67,6 +68,16 @@ const InvestmentHighlight: React.FC = () => {
                     <p className="max-w-2xl mx-auto text-slate-600 dark:text-slate-400">
                         Discover opportunities with our Cebex investment platform and become part of our growing global community of investors.
                     </p>
+                    <div className="mt-4">
+                        <Link
+                            href="/investment-guide"
+                            className="inline-flex items-center font-medium text-teal-600 hover:text-teal-700 dark:text-teal-400 dark:hover:text-teal-300 transition-colors"
+                        >
+                            <BookOpen className="mr-2 h-4 w-4" />
+                            <span>Learn about our investment approach</span>
+                            <ArrowRight className="ml-1 h-4 w-4" />
+                        </Link>
+                    </div>
                 </motion.div>
 
                 <motion.div
@@ -96,6 +107,15 @@ const InvestmentHighlight: React.FC = () => {
                             <p className="text-slate-600 dark:text-slate-400 max-w-xl">
                                 Our Cebex platform provides a secure and easy way to begin your investment journey with Smart Treasures. Join thousands of global investors today.
                             </p>
+                            <div className="mt-3">
+                                <Link
+                                    href="/investment-guide/trading"
+                                    className="inline-flex items-center text-sm font-medium text-slate-700 hover:text-teal-600 dark:text-slate-300 dark:hover:text-teal-400 transition-colors"
+                                >
+                                    <span>New to trading? Learn the basics</span>
+                                    <ArrowRight className="ml-1 h-3 w-3" />
+                                </Link>
+                            </div>
                         </div>
 
                         <div className="relative group">

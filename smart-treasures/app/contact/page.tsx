@@ -10,6 +10,7 @@ import {
     CheckCircleIcon
 } from "lucide-react";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import GlobalMap from "@/components/Map/GlobalMap";
 
 // TypeScript interface for form data
 interface FormData {
@@ -83,7 +84,7 @@ const ContactUs: React.FC = () => {
     };
 
     return (
-        <div className="bg-gradient-to-b from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900 py-12 px-4 sm:px-6">
+        <div className="bg-gradient-to-b from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900 py-24 px-4 sm:px-6">
             <motion.div
                 initial="hidden"
                 animate="visible"
@@ -339,18 +340,26 @@ const ContactUs: React.FC = () => {
                     </motion.div>
                 </div>
 
-                {/* Map - Optional */}
+                {/* Map Section */}
                 <motion.div variants={itemVariants} className="mt-8">
+                    <div className="bg-white dark:bg-slate-900 p-4 rounded-xl shadow-md">
+                        {/* Import and use GlobalMap component here */}
+                        <GlobalMap />
+                    </div>
+                </motion.div>
+
+                {/* Map - Optional */}
+                {/* <motion.div variants={itemVariants} className="mt-8">
                     <div className="bg-white dark:bg-slate-900 p-4 rounded-xl shadow-md">
                         <div className="h-60 md:h-80 w-full overflow-hidden rounded-lg bg-slate-200 dark:bg-slate-800 flex items-center justify-center">
                             <p className="text-slate-600 dark:text-slate-400 text-center p-4">
-                                {/* Embed Google Maps or a similar service here */}
+                                
                                 <span className="block mb-2 text-slate-700 dark:text-slate-300 font-medium">Interactive Map</span>
                                 This is where an interactive map would go in a production environment.
                             </p>
                         </div>
                     </div>
-                </motion.div>
+                </motion.div> */}
             </motion.div>
         </div>
     );

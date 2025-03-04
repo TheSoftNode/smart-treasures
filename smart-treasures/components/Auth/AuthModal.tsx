@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Mail, Lock, Eye, EyeOff, User, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -30,6 +30,33 @@ const AuthModal = ({ isOpen, onClose, onLogin }: AuthModalProps) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [name, setName] = useState("");
+
+    // Lock body scroll when modal is open
+    useEffect(() => {
+        if (isOpen) {
+            // Save current scroll position
+            const scrollY = window.scrollY;
+
+            // Add styles to prevent scrolling but maintain position
+            document.body.style.position = 'fixed';
+            document.body.style.top = `-${scrollY}px`;
+            document.body.style.width = '100%';
+        } else {
+            // Restore scroll position when modal is closed
+            const scrollY = document.body.style.top;
+            document.body.style.position = '';
+            document.body.style.top = '';
+            document.body.style.width = '';
+            window.scrollTo(0, parseInt(scrollY || '0') * -1);
+        }
+
+        return () => {
+            // Cleanup when component unmounts
+            document.body.style.position = '';
+            document.body.style.top = '';
+            document.body.style.width = '';
+        };
+    }, [isOpen]);
 
     const handleLogin = (e: React.FormEvent) => {
         e.preventDefault();
@@ -88,10 +115,10 @@ const AuthModal = ({ isOpen, onClose, onLogin }: AuthModalProps) => {
     return (
         <AnimatePresence>
             {isOpen && (
-                <>
-                    {/* Backdrop */}
+                <div className="fixed inset-0 z-50 flex items-center justify-center">
+                    {/* Backdrop - separate from the content positioning */}
                     <motion.div
-                        className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50"
+                        className="fixed inset-0 bg-black/50 backdrop-blur-sm"
                         initial="hidden"
                         animate="visible"
                         exit="exit"
@@ -99,16 +126,19 @@ const AuthModal = ({ isOpen, onClose, onLogin }: AuthModalProps) => {
                         onClick={onClose}
                     />
 
-                    {/* Modal */}
+                    {/* Modal container with overflow auto */}
                     <motion.div
-                        className="fixed inset-0 flex items-center justify-center z-50 pointer-events-none p-4"
+                        className="fixed inset-0 z-50 flex items-center justify-center pt-16 pb-5 px-4 overflow-auto"
                         initial="hidden"
                         animate="visible"
                         exit="exit"
+                        variants={overlayVariants}
+                        onClick={onClose}
                     >
                         <motion.div
-                            className="pointer-events-auto w-full max-w-md"
+                            className="w-full max-w-md my-auto"
                             variants={modalVariants}
+                            onClick={(e) => e.stopPropagation()}
                         >
                             <Card className="border-2 border-yellow-400/20 shadow-xl dark:bg-slate-950 dark:border-yellow-500/30">
                                 <CardHeader className="relative pb-2">
@@ -307,7 +337,7 @@ const AuthModal = ({ isOpen, onClose, onLogin }: AuthModalProps) => {
                             </Card>
                         </motion.div>
                     </motion.div>
-                </>
+                </div>
             )}
         </AnimatePresence>
     );

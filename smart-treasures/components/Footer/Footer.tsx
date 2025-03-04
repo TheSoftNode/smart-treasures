@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import {
     Mail,
     MapPin,
@@ -73,14 +74,28 @@ const Footer = () => {
                 >
                     {/* Company Info */}
                     <motion.div variants={itemVariants} className="space-y-6">
-                        <div className="flex items-center">
+                        {/* <div className="flex items-center">
                             <div className="h-10 w-10 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-md flex items-center justify-center">
                                 <span className="text-lg font-bold text-slate-800">ST</span>
                             </div>
                             <span className="ml-3 text-xl font-bold bg-gradient-to-r from-yellow-400 via-teal-500 to-pink-500 bg-clip-text text-transparent">
                                 Smart Treasures
                             </span>
-                        </div>
+                        </div> */}
+                        <Link href="/" className="flex items-center">
+                            <div className="h-10 w-10  rounded-md flex items-center justify-center overflow-hidden">
+                                <Image
+                                    src="/logo/icon.png"
+                                    alt="Smart Treasures Logo"
+                                    width={28}
+                                    height={28}
+                                    className="object-contain"
+                                />
+                            </div>
+                            <span className="ml-2 text-xl font-bold bg-gradient-to-r from-yellow-400 via-teal-500 to-pink-500 dark:from-yellow-400 dark:via-teal-400 dark:to-pink-400 bg-clip-text text-transparent">
+                                Smart Treasures
+                            </span>
+                        </Link>
 
                         <p className="text-slate-300 dark:text-slate-400">
                             Empowering communities worldwide through innovation, sustainability, and collaboration.
@@ -164,7 +179,7 @@ const Footer = () => {
                             <li>
                                 <Link href="/tech-tutorials" className="flex items-center text-slate-300 dark:text-slate-400 hover:text-yellow-300 dark:hover:text-yellow-300 transition-colors duration-200">
                                     <ChevronRight className="h-4 w-4 text-yellow-400 mr-2" />
-                                    <span>Tech Tutorials</span>
+                                    <span>Tech Academy</span>
                                 </Link>
                             </li>
                         </ul>

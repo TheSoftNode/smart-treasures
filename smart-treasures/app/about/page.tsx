@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { CheckCircle, Coffee, Users, Lock, Globe, ChevronRight, ArrowRight } from 'lucide-react';
+import SecuritySection from '@/components/About/SecuritySection';
 
 const AboutUs: React.FC = () => {
     // Animation variants
@@ -58,22 +59,22 @@ const AboutUs: React.FC = () => {
         {
             name: "Trust Otorudor",
             position: "CEO & Founder",
-            imageSrc: "/images/leadership.jpg", // Replace with actual path
+            imageSrc: "/about/leadership.jpg",
         },
         {
             name: "Jane Smith",
             position: "CTO",
-            imageSrc: "/images/leadership2.jpg", // Replace with actual path
+            imageSrc: "/about/leadership2.jpg",
         },
         {
             name: "Alex Johnson",
             position: "CFO",
-            imageSrc: "/images/leadership3.jpg", // Replace with actual path
+            imageSrc: "/about/leadership3.jpg",
         }
     ];
 
     return (
-        <div className="bg-gradient-to-b from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900 py-12 md:py-16">
+        <div className="bg-gradient-to-b from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900 py-20 md:py-24">
             <motion.div
                 initial="hidden"
                 animate="visible"
@@ -112,7 +113,7 @@ const AboutUs: React.FC = () => {
                             <div className="md:w-1/2 rounded-xl overflow-hidden shadow-xl transform md:translate-y-8 border border-slate-200 dark:border-slate-700">
                                 <div className="relative w-full aspect-video">
                                     <Image
-                                        src="/images/about.jpg" // Replace with actual path
+                                        src="/about/about.jpg"
                                         alt="Smart Treasures Community"
                                         layout="fill"
                                         objectFit="cover"
@@ -251,57 +252,7 @@ const AboutUs: React.FC = () => {
                 </motion.div>
 
                 {/* Security Section */}
-                <motion.div variants={itemVariants} className="mb-16">
-                    <div className="bg-white dark:bg-slate-900 p-8 rounded-xl shadow-md">
-                        <div className="flex flex-col md:flex-row gap-8">
-                            <div className="md:w-1/2">
-                                <div className="flex items-center mb-6">
-                                    <div className="bg-pink-100 dark:bg-pink-900/20 p-2 rounded-lg mr-3">
-                                        <Lock className="h-6 w-6 text-pink-500" />
-                                    </div>
-                                    <h2 className="text-2xl font-bold text-slate-800 dark:text-slate-200">Security at Cebex</h2>
-                                </div>
-
-                                <p className="text-slate-600 dark:text-slate-400 mb-4">
-                                    At Smart Treasures, the security of our platform, Cebex, is a top priority. We utilize industry-leading encryption methods to ensure that user data remains private and protected.
-                                </p>
-
-                                <ul className="space-y-2 mb-6">
-                                    <li className="flex items-start">
-                                        <CheckCircle className="h-5 w-5 text-pink-500 mt-0.5 mr-2 flex-shrink-0" />
-                                        <span className="text-slate-600 dark:text-slate-400">End-to-end encryption for all communications</span>
-                                    </li>
-                                    <li className="flex items-start">
-                                        <CheckCircle className="h-5 w-5 text-pink-500 mt-0.5 mr-2 flex-shrink-0" />
-                                        <span className="text-slate-600 dark:text-slate-400">Secure Socket Layer (SSL) technology</span>
-                                    </li>
-                                    <li className="flex items-start">
-                                        <CheckCircle className="h-5 w-5 text-pink-500 mt-0.5 mr-2 flex-shrink-0" />
-                                        <span className="text-slate-600 dark:text-slate-400">Regular security audits and penetration testing</span>
-                                    </li>
-                                    <li className="flex items-start">
-                                        <CheckCircle className="h-5 w-5 text-pink-500 mt-0.5 mr-2 flex-shrink-0" />
-                                        <span className="text-slate-600 dark:text-slate-400">Compliance with global security standards</span>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div className="md:w-1/2">
-                                <div className="relative rounded-xl overflow-hidden h-64 shadow-md">
-                                    <Image
-                                        src="/images/security.jpg" // Replace with actual path
-                                        alt="Cebex Platform Security"
-                                        layout="fill"
-                                        objectFit="cover"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
-                                        <p className="text-white text-sm p-4">Your data is encrypted and secured with the latest security measures.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </motion.div>
+                <SecuritySection />
 
                 {/* Call to Action */}
                 <motion.div variants={itemVariants}>
