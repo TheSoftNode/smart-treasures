@@ -2,18 +2,21 @@ import AboutSection from '@/components/Landing/AboutSection';
 import AcademyCTA from '@/components/Landing/AcademyCTA';
 import AchievementsSection from '@/components/Landing/AchievementsSection';
 import CallToAction from '@/components/Landing/CallToAction';
+import CharitySection from '@/components/Landing/CharitySection';
 import FaqSection from '@/components/Landing/FaqSection';
 import HeroSection from '@/components/Landing/HeroSection';
 import InvestmentHighlight from '@/components/Landing/InvestmentHighlight';
 import StatsSection from '@/components/Landing/StatsSection';
 import React from 'react';
 
-const HomePage = () => {
+const HomePage = () =>
+{
   return (
     <main className='pt-12'>
       <HeroSection />
       <StatsSection />
       <AboutSection />
+      <CharitySection />
       <AcademyCTA />
       <InvestmentHighlight />
       <AchievementsSection />

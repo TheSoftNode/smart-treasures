@@ -4,7 +4,8 @@ import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import {
+import
+{
     Menu,
     X,
     ChevronDown,
@@ -18,10 +19,12 @@ import {
     UserCircle,
     Bell,
     LogOut,
-    Settings
+    Settings,
+    Heart
 } from "lucide-react";
 
-import {
+import
+{
     NavigationMenu,
     NavigationMenuContent,
     NavigationMenuItem,
@@ -31,7 +34,8 @@ import {
     navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 
-import {
+import
+{
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
@@ -44,7 +48,8 @@ import ThemeToggle from "../Themes/ThemeToggle";
 import AuthModal from "../Auth/AuthModal";
 import Image from 'next/image';
 
-const NavBar = () => {
+const NavBar = () =>
+{
     const [mounted, setMounted] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
@@ -64,8 +69,10 @@ const NavBar = () => {
     const scrollPos = useRef(0);
 
     // Handle scroll effect
-    useEffect(() => {
-        const handleScroll = () => {
+    useEffect(() =>
+    {
+        const handleScroll = () =>
+        {
             setScrolled(window.scrollY > 10);
         };
 
@@ -74,8 +81,10 @@ const NavBar = () => {
     }, []);
 
     // Lock body scroll when mobile menu is open
-    useEffect(() => {
-        if (mobileMenuOpen) {
+    useEffect(() =>
+    {
+        if (mobileMenuOpen)
+        {
             // Save current scroll position
             scrollPos.current = window.scrollY;
 
@@ -85,7 +94,8 @@ const NavBar = () => {
             document.body.style.position = 'fixed';
             document.body.style.top = `-${scrollPos.current}px`;
             document.body.style.width = '100%';
-        } else {
+        } else
+        {
             // Restore scroll behavior and position
             document.body.style.overflow = '';
             document.body.style.height = '';
@@ -99,12 +109,14 @@ const NavBar = () => {
     }, [mobileMenuOpen]);
 
     // Theme switcher needs to wait for mounting to avoid hydration mismatch
-    useEffect(() => {
+    useEffect(() =>
+    {
         setMounted(true);
     }, []);
 
     // Toggle submenu expansion with animation support
-    const toggleExpanded = (menu: 'about' | 'learning' | 'ventures') => {
+    const toggleExpanded = (menu: 'about' | 'learning' | 'ventures') =>
+    {
         setExpandedMenus(prev => ({ ...prev, [menu]: !prev[menu] }));
     };
 
@@ -388,6 +400,20 @@ const NavBar = () => {
                                         <NavigationMenuContent>
                                             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2">
                                                 <li>
+                                                    <Link href="/charity-programs" legacyBehavior passHref>
+                                                        <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-100 hover:text-slate-900 dark:hover:bg-slate-800 dark:hover:text-slate-50">
+                                                            <div className="flex items-center space-x-2">
+                                                                <Heart className="h-4 w-4 text-teal-500" />
+                                                                <div className="text-sm font-medium leading-none">Charity Programs</div>
+                                                            </div>
+                                                            <p className="line-clamp-2 text-sm leading-snug text-slate-600 dark:text-slate-400">
+                                                                Our initiatives to help communities in need
+                                                            </p>
+                                                        </NavigationMenuLink>
+                                                    </Link>
+                                                </li>
+
+                                                <li>
                                                     <Link href="/coffee-shops" legacyBehavior passHref>
                                                         <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-100 hover:text-slate-900 dark:hover:bg-slate-800 dark:hover:text-slate-50">
                                                             <div className="flex items-center space-x-2">
@@ -413,6 +439,7 @@ const NavBar = () => {
                                                         </NavigationMenuLink>
                                                     </Link>
                                                 </li>
+
                                             </ul>
                                         </NavigationMenuContent>
                                     </NavigationMenuItem>
@@ -682,6 +709,13 @@ const NavBar = () => {
                                                 className="overflow-hidden mt-2 pl-4 space-y-2"
                                             >
                                                 <Link
+                                                    href="/charity-programs"
+                                                    className="block text-slate-600 dark:text-slate-400 hover:text-teal-500 dark:hover:text-teal-400 py-1"
+                                                    onClick={() => setMobileMenuOpen(false)}
+                                                >
+                                                    Charity Programs
+                                                </Link>
+                                                <Link
                                                     href="/coffee-shops"
                                                     className="block text-slate-600 dark:text-slate-400 hover:text-teal-500 dark:hover:text-teal-400 py-1"
                                                     onClick={() => setMobileMenuOpen(false)}
@@ -747,7 +781,8 @@ const NavBar = () => {
                                             </Link>
                                             <button
                                                 className="flex items-center space-x-2 text-red-500 hover:text-red-600 py-2 w-full text-left"
-                                                onClick={() => {
+                                                onClick={() =>
+                                                {
                                                     setIsLoggedIn(false);
                                                     setMobileMenuOpen(false);
                                                 }}
@@ -760,7 +795,8 @@ const NavBar = () => {
                                         <div className="flex flex-col space-y-3">
                                             <Button
                                                 className="bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-white font-medium w-full py-6"
-                                                onClick={() => {
+                                                onClick={() =>
+                                                {
                                                     setShowAuthModal(true);
                                                     setMobileMenuOpen(false);
                                                 }}
@@ -771,7 +807,8 @@ const NavBar = () => {
                                             <Button
                                                 variant="outline"
                                                 className="border-teal-500 text-slate-800 dark:text-slate-200 font-medium w-full py-6"
-                                                onClick={() => {
+                                                onClick={() =>
+                                                {
                                                     setShowAuthModal(true);
                                                     setMobileMenuOpen(false);
                                                 }}

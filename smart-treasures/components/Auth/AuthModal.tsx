@@ -6,7 +6,8 @@ import { X, Mail, Lock, Eye, EyeOff, User, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import {
+import
+{
     Card,
     CardContent,
     CardDescription,
@@ -16,13 +17,15 @@ import {
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-interface AuthModalProps {
+interface AuthModalProps
+{
     isOpen: boolean;
     onClose: () => void;
     onLogin: () => void;
 }
 
-const AuthModal = ({ isOpen, onClose, onLogin }: AuthModalProps) => {
+const AuthModal = ({ isOpen, onClose, onLogin }: AuthModalProps) =>
+{
     const [showPassword, setShowPassword] = useState(false);
     const [activeTab, setActiveTab] = useState("login");
 
@@ -32,8 +35,10 @@ const AuthModal = ({ isOpen, onClose, onLogin }: AuthModalProps) => {
     const [name, setName] = useState("");
 
     // Lock body scroll when modal is open
-    useEffect(() => {
-        if (isOpen) {
+    useEffect(() =>
+    {
+        if (isOpen)
+        {
             // Save current scroll position
             const scrollY = window.scrollY;
 
@@ -41,7 +46,8 @@ const AuthModal = ({ isOpen, onClose, onLogin }: AuthModalProps) => {
             document.body.style.position = 'fixed';
             document.body.style.top = `-${scrollY}px`;
             document.body.style.width = '100%';
-        } else {
+        } else
+        {
             // Restore scroll position when modal is closed
             const scrollY = document.body.style.top;
             document.body.style.position = '';
@@ -50,7 +56,8 @@ const AuthModal = ({ isOpen, onClose, onLogin }: AuthModalProps) => {
             window.scrollTo(0, parseInt(scrollY || '0') * -1);
         }
 
-        return () => {
+        return () =>
+        {
             // Cleanup when component unmounts
             document.body.style.position = '';
             document.body.style.top = '';
@@ -58,7 +65,8 @@ const AuthModal = ({ isOpen, onClose, onLogin }: AuthModalProps) => {
         };
     }, [isOpen]);
 
-    const handleLogin = (e: React.FormEvent) => {
+    const handleLogin = (e: React.FormEvent) =>
+    {
         e.preventDefault();
         // Here you would typically handle authentication logic
         console.log("Login attempt with:", email, password);
@@ -66,7 +74,8 @@ const AuthModal = ({ isOpen, onClose, onLogin }: AuthModalProps) => {
         onClose();
     };
 
-    const handleSignup = (e: React.FormEvent) => {
+    const handleSignup = (e: React.FormEvent) =>
+    {
         e.preventDefault();
         // Here you would typically handle registration logic
         console.log("Signup attempt with:", name, email, password);
@@ -128,7 +137,7 @@ const AuthModal = ({ isOpen, onClose, onLogin }: AuthModalProps) => {
 
                     {/* Modal container with overflow auto */}
                     <motion.div
-                        className="fixed inset-0 z-50 flex items-center justify-center pt-16 pb-5 px-4 overflow-auto"
+                        className="fixed inset-0 z-50 flex items-center justify-center pt-24 pb-5 px-4 overflow-auto"
                         initial="hidden"
                         animate="visible"
                         exit="exit"
