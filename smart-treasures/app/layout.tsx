@@ -5,6 +5,7 @@ import { ThemeProvider } from "next-themes";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import ConstructionBanner from "@/components/Landing/ConstructionBanner";
+import { Suspense } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -43,9 +44,11 @@ export default function RootLayout({
           {/* <ConstructionBanner /> */}
 
           <Navbar />
-          <main className="flex-grow">
-            {children}
-          </main>
+          <Suspense fallback={<div>Loading application form...</div>}>
+            <main className="flex-grow">
+              {children}
+            </main>
+          </Suspense>
           <Footer />
 
         </ThemeProvider>
