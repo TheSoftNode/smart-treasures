@@ -1,6 +1,5 @@
 "use client"
 
-
 import React from 'react';
 import Link from 'next/link';
 import { Heart, Users, Globe, ArrowRight, ExternalLink, Sparkles } from 'lucide-react';
@@ -143,7 +142,7 @@ const CharitySection = () =>
                                     <div className="w-2 h-2 rounded-full bg-yellow-500 mr-2"></div>
                                     <span className="text-sm text-slate-500 dark:text-slate-400">120+ Schools</span>
                                 </div>
-                                <Link href="/charity-programs/education" className="inline-flex items-center font-medium text-yellow-500 hover:text-yellow-600 group-hover:translate-x-1 transition-transform duration-300">
+                                <Link href="/charity/education" className="inline-flex items-center font-medium text-yellow-500 hover:text-yellow-600 group-hover:translate-x-1 transition-transform duration-300">
                                     <span className="text-sm">Explore</span>
                                     <ArrowRight className="h-4 w-4 ml-1 opacity-70" />
                                 </Link>
@@ -179,7 +178,7 @@ const CharitySection = () =>
                                     <div className="w-2 h-2 rounded-full bg-teal-500 mr-2"></div>
                                     <span className="text-sm text-slate-500 dark:text-slate-400">50+ Communities</span>
                                 </div>
-                                <Link href="/charity-programs/community" className="inline-flex items-center font-medium text-teal-500 hover:text-teal-600 group-hover:translate-x-1 transition-transform duration-300">
+                                <Link href="/charity/community" className="inline-flex items-center font-medium text-teal-500 hover:text-teal-600 group-hover:translate-x-1 transition-transform duration-300">
                                     <span className="text-sm">Explore</span>
                                     <ArrowRight className="h-4 w-4 ml-1 opacity-70" />
                                 </Link>
@@ -194,7 +193,6 @@ const CharitySection = () =>
                         whileHover="hover"
                         className="relative bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-xl overflow-hidden group"
                     >
-                        {/* Gradient border effect */}
                         <div className="absolute inset-0 rounded-xl p-0.5 bg-gradient-to-br from-pink-300 via-pink-400 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
                         <div className="relative h-full p-7 rounded-[calc(0.75rem-1px)] bg-white dark:bg-slate-800 flex flex-col">
@@ -215,7 +213,7 @@ const CharitySection = () =>
                                     <div className="w-2 h-2 rounded-full bg-pink-500 mr-2"></div>
                                     <span className="text-sm text-slate-500 dark:text-slate-400">30+ Projects</span>
                                 </div>
-                                <Link href="/charity-programs/environment" className="inline-flex items-center font-medium text-pink-500 hover:text-pink-600 group-hover:translate-x-1 transition-transform duration-300">
+                                <Link href="/charity/environment" className="inline-flex items-center font-medium text-pink-500 hover:text-pink-600 group-hover:translate-x-1 transition-transform duration-300">
                                     <span className="text-sm">Explore</span>
                                     <ArrowRight className="h-4 w-4 ml-1 opacity-70" />
                                 </Link>
