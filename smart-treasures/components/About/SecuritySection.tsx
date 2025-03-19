@@ -77,7 +77,7 @@ const SecuritySection: React.FC = () => {
                         </div>
                     </div>
                     <h2 className="text-3xl font-bold bg-gradient-to-r from-pink-500 to-teal-500 bg-clip-text text-transparent mb-4">
-                        Security at Cebex
+                        Security at Cbex
                     </h2>
                     <p className="max-w-2xl mx-auto text-slate-600 dark:text-slate-400">
                         Your security is our highest priority. We employ industry-leading technology to protect your data and investments.
