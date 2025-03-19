@@ -104,15 +104,16 @@ const Footer = () => {
                         <div className="space-y-3">
                             <div className="flex items-start space-x-3">
                                 <MapPin className="h-5 w-5 text-teal-500 mt-0.5 flex-shrink-0" />
-                                <span className="text-slate-300 dark:text-slate-400">123 Innovation Drive, Global City, 10001</span>
+                                <span className="text-slate-300 dark:text-slate-400">166 Seliat Bus Stop,Egbeda-Isheri Road, Lagos.</span>
                             </div>
                             <div className="flex items-center space-x-3">
                                 <Phone className="h-5 w-5 text-teal-500 flex-shrink-0" />
-                                <span className="text-slate-300 dark:text-slate-400">+1 (555) 123-4567</span>
+                                <span className="text-slate-300 dark:text-slate-400">(+234) 803 704 5942</span>
                             </div>
                             <div className="flex items-center space-x-3">
                                 <Mail className="h-5 w-5 text-teal-400 flex-shrink-0" />
-                                <span className="text-slate-300 dark:text-slate-400">contact@smarttreasures.com</span>
+                                <span className="text-slate-300 dark:text-slate-400">	
+                                stinvestmentcooperativeltd@gmail.com</span>
                             </div>
                         </div>
                     </motion.div>
