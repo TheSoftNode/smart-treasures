@@ -123,8 +123,8 @@ const ContactUs: React.FC = () =>
                                     <div>
                                         <h3 className="font-medium text-slate-700 dark:text-slate-300">Address</h3>
                                         <p className="text-sm text-slate-600 dark:text-slate-400">
-                                            123 Innovation Drive<br />
-                                            Global City, 10001
+                                            166 Seliat Bus Stop,Egbeda-Isheri <br /> Road, Lagos.
+                                            
                                         </p>
                                     </div>
                                 </div>
@@ -136,7 +136,7 @@ const ContactUs: React.FC = () =>
                                     <div>
                                         <h3 className="font-medium text-slate-700 dark:text-slate-300">Phone</h3>
                                         <p className="text-sm text-slate-600 dark:text-slate-400">
-                                            +1 (555) 123-4567
+                                            (+234) 803 704 5942
                                         </p>
                                     </div>
                                 </div>
@@ -148,7 +148,7 @@ const ContactUs: React.FC = () =>
                                     <div>
                                         <h3 className="font-medium text-slate-700 dark:text-slate-300">Email</h3>
                                         <p className="text-sm text-slate-600 dark:text-slate-400">
-                                            contact@smarttreasures.com
+                                           stinvestmentcooperativeltd@gmail.com
                                         </p>
                                     </div>
                                 </div>
